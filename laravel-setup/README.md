@@ -14,14 +14,14 @@ Refer to this [url](https://www.digitalocean.com/community/tutorials/how-to-inst
 ### Enable permissions for user visiting the apache server
 * Add yourself to the www-data group
 
-```sudo adduser $USER www-data```
+  ```sudo adduser $USER www-data```
 * Change the ownership of the files in /var/www
 
-```sudo chown -R www-data:www-data /var/www```
+  ```sudo chown -R www-data:www-data /var/www```
 * Change the umask, so newly created files by Apache grants write permissions to the group too. Add umask 007 to /etc/apache2/envvars.
 * Grant yourself (technically, the group www-data) write permissions
 
-```sudo chmod -R g+w /var/www``` **OR** ```sudo chmod 755 -R /var/www```
+  ```sudo chmod -R g+w /var/www``` **OR** ```sudo chmod 755 -R /var/www```
 
 ### Allow access to .htaccess file
 * ```sudo nano /etc/apache2/apache2.conf```
@@ -54,5 +54,5 @@ Refer to this [url](https://www.digitalocean.com/community/tutorials/how-to-inst
 ### Finishing and get started
 * Follow the last few steps from https://www.howtoforge.com/tutorial/install-laravel-on-ubuntu-for-apache/
 
-```php artisan key:generate```
+  ```php artisan key:generate```
 
