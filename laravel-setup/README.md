@@ -24,27 +24,30 @@ sudo service apache2 start/restart/stop
 - Change line AllowOverride None to AllowOverride All
 
 ## Install Laravel framework
-* Refer to this [url](https://www.howtoforge.com/tutorial/install-laravel-on-ubuntu-for-apache/)
+* Refer [here](https://www.howtoforge.com/tutorial/install-laravel-on-ubuntu-for-apache/)
 
 ## Install latest laravel requires php v5.6 and above
-### Steps are mentioned [here](https://www.dev-metal.com/install-setup-php-5-6-ubuntu-14-04-lts/)
 * ```sudo add-apt-repository ppa:ondrej/php5-5.6```
 * ```sudo apt-get update```
 * ```sudo apt-get install python-software-properties```
 * ```sudo apt-get install php5```
+> More info refer [here](https://www.dev-metal.com/install-setup-php-5-6-ubuntu-14-04-lts/)
+
 ### Install php5.6 packages
-  ```sudo apt-get install php5.6-mbstring```
-  ```sudo apt-get install php5.6-xml```
-  ```sudo apt-get install php5.6-mcrypt```
-  ```sudo apt-get install php5.6-mysql```
+* ```sudo apt-get install php5.6-mbstring```
+* ```sudo apt-get install php5.6-xml```
+* ```sudo apt-get install php5.6-mcrypt```
+* ```sudo apt-get install php5.6-mysql```
+
 ### Enable php module
-  ```sudo phpenmod mcrypt```
-  ```sudo phpenmod mbstring```
+* ```sudo phpenmod mcrypt```
+* ```sudo phpenmod mbstring```
+
 ### Check php version
 * ```php -v // show version```
 * ```php -m // show modules```
 
-## Final Step
+### Finishing and get started
 * Follow the last few steps from https://www.howtoforge.com/tutorial/install-laravel-on-ubuntu-for-apache/
 ```php artisan key:generate```
 
