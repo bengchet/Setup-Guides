@@ -3,13 +3,13 @@
 ## Setup LAMP on Ubuntu
 Refer to this [url](https://www.digitalocean.com/community/tutorials/how-to-install-lamp-on-ubuntu-14-04-quickstart)
 
-## Disable server on boot startup
+### Disable apache server on boot startup
 sudo update-rc.d -f apache2 remove
 
-## Enable or disable server manually
+### Enable or disable apache server manually
 sudo service apache2 start/restart/stop
 
-## Enable permissions for user visiting the server
+### Enable permissions for user visiting the apache server
 * Add yourself to the www-data group
 ```sudo adduser $USER www-data```
 * Change the ownership of the files in /var/www
@@ -18,7 +18,7 @@ sudo service apache2 start/restart/stop
 * Grant yourself (technically, the group www-data) write permissions
 ```sudo chmod -R g+w /var/www``` **Or** ```sudo chmod 755 -R /var/www```
 
-## Allow access to .htaccess file
+### Allow access to .htaccess file
 * ```sudo nano /etc/apache2/apache2.conf```
 * At section /var/www
 - Change line AllowOverride None to AllowOverride All
@@ -26,7 +26,7 @@ sudo service apache2 start/restart/stop
 ## Install Laravel framework
 * Refer [here](https://www.howtoforge.com/tutorial/install-laravel-on-ubuntu-for-apache/)
 
-## Install latest laravel requires php v5.6 and above
+### Install latest laravel requires php v5.6 and above
 * ```sudo add-apt-repository ppa:ondrej/php5-5.6```
 * ```sudo apt-get update```
 * ```sudo apt-get install python-software-properties```
@@ -49,5 +49,6 @@ sudo service apache2 start/restart/stop
 
 ### Finishing and get started
 * Follow the last few steps from https://www.howtoforge.com/tutorial/install-laravel-on-ubuntu-for-apache/
+
 ```php artisan key:generate```
 
