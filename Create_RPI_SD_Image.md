@@ -1,5 +1,16 @@
 ## How to Create Raspsberry Pi Image in Linux
 
+* Prepare predefined Raspbian OS
+  - Enable UART by adding following line in /boot/config.txt
+    ```
+      enable_uart=1
+    ```
+  - Enable SSH by adding file `ssh` in root directory of BOOT
+  - Enable SPI, I2C, etc by removing # in /boot/config.txt
+  - Enable auto expand file system by adding following line in /boot/cmdline.txt
+    ```
+      quiet init=/usr/lib/raspi-config/init_resize.sh
+    ```
 * Insert SD card with OS ready to PC
 * Check the device name of SD card using `fdisk`
 
