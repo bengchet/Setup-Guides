@@ -25,7 +25,7 @@
 * Prepare image file
 
   ```
-    $ dd /dev/mmcblk0/ /path/to/myimage.img
+    $ dd if=/dev/mmcblk0 of=/path/to/myimage.img
   ```
 * Install **gparted** tool
 
