@@ -12,10 +12,15 @@
       quiet init=/usr/lib/raspi-config/init_resize.sh
     ```
 * Insert SD card with OS ready to PC
-* Check the device name of SD card using `fdisk`
+* Check the device name of SD card using `fdisk`, for example `/dev/mmcblk0/`
 
   ```
     $ sudo fdisk -l
+  ```
+* Unmount the Drive before start using dd tool
+  
+  ```
+    $ sudo umount /dev/mmcblk0/
   ```
 * Prepare image file
 
