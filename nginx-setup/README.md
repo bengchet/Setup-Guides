@@ -60,7 +60,7 @@ server {
         }
 }
 ```
-/etc/nginx/sites-available/default
+/etc/nginx/nginx.conf
 
 ```
 http {
