@@ -18,6 +18,9 @@
   
   // for latest only
   $ sudo n latest
+
+  // upgrade (or downgrade) to specific version
+  $ sudo n <version>
   
   // To undo:
   $ sudo apt-get install --reinstall nodejs-legacy     # fix /usr/bin/node
