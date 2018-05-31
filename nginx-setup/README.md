@@ -28,6 +28,13 @@ server {
                 allow all;
         }
         
+        # error page not found handling
+        error_page 404 = @default;
+
+        location @default {
+                rewrite ^/.* / permanent;
+        }
+        
         # Need to change to io("/", {path:"/lorademoSocket"}) at client-side
         location /lorademoSocket/ {
                 proxy_set_header X-Real-IP $remote_addr;
